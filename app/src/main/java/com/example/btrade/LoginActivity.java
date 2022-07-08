@@ -26,45 +26,31 @@ public class LoginActivity extends AppCompatActivity {
         edt_user = findViewById(R.id.username);
         edt_pass = findViewById(R.id.pass);
         textView=findViewById(R.id.text_dont);
-        /*textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-                startActivity(intent);
-            }
-        });*/
-        signup.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-                startActivity(intent);
-            }
+        textView.setOnClickListener(view -> {
+            Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
+            startActivity(intent);
         });
-        logbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String username=edt_user.getText().toString();
-                String password=edt_pass.getText().toString();
-                if (username.isEmpty() && password.isEmpty()) {
-                    Toast.makeText(LoginActivity.this,
-                            "Please enter all credentials",
-                            Toast.LENGTH_SHORT).show();
-                }else if (username.isEmpty()) {
-                    Toast.makeText(LoginActivity.this,
-                            "Please enter email",
-                            Toast.LENGTH_SHORT).show();
-                }
-                else if (password.isEmpty()) {
-                    Toast.makeText(LoginActivity.this,
-                            "Please enter PASSWORD",
-                            Toast.LENGTH_SHORT).show();
-                }else{
-                    Intent sign=new Intent(LoginActivity.this,DashboardActivity.class);
-                    startActivity(sign);
-                }
-            }
 
+        logbtn.setOnClickListener(view -> {
+            String username=edt_user.getText().toString();
+            String password=edt_pass.getText().toString();
+            if (username.isEmpty() && password.isEmpty()) {
+                Toast.makeText(LoginActivity.this,
+                        "Please enter all credentials",
+                        Toast.LENGTH_SHORT).show();
+            }else if (username.isEmpty()) {
+                Toast.makeText(LoginActivity.this,
+                        "Please enter email",
+                        Toast.LENGTH_SHORT).show();
+            }
+            else if (password.isEmpty()) {
+                Toast.makeText(LoginActivity.this,
+                        "Please enter PASSWORD",
+                        Toast.LENGTH_SHORT).show();
+            }else{
+                Intent sign=new Intent(LoginActivity.this,DashboardActivity.class);
+                startActivity(sign);
+            }
         });
     }
 }

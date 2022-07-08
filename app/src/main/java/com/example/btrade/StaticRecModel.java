@@ -1,8 +1,8 @@
 package com.example.btrade;
 
 public class StaticRecModel {
-    private int image;
-    private String text;
+    private final int image;
+    private final String text;
 
     public StaticRecModel(int image, String text) {
         this.image = image;

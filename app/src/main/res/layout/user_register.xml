@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edtUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:drawableStart="@drawable/person_outline"
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:hint="@string/username"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColorHint="#78909C"
+            android:textSize="24sp"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="23dp"
+            android:drawableStart="@android:drawable/sym_action_email"
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:hint="@string/email_address"
+            android:importantForAutofill="no"
+            android:inputType="textWebEmailAddress"
+            android:textColorHint="#78909C"
+            android:textSize="24sp"
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName|textPassword"
+            android:textColor="#009688"
+            android:textSize="24sp"
+            tools:ignore="LabelFor,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/edtPassword2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:ems="10"
+            android:fontFamily="cursive"
+            android:hint="@string/confirm_password"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName|textPassword"
+            android:textColor="#009688"
+            android:textSize="24sp"
+            tools:ignore="LabelFor,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btnRegisterCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:hapticFeedbackEnabled="true"
+            android:shadowColor="#00BCD4"
+            android:shadowRadius="@dimen/material_emphasis_high_type"
+            android:text="@string/sign_up"
+            app:cornerRadius="50dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

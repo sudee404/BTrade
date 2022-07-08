@@ -26,9 +26,10 @@
             android:drawableStart="@android:drawable/ic_menu_myplaces"
             android:ems="10"
             android:fontFamily="cursive"
-            android:hint="Username"
+            android:hint="@string/username"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
+            android:textColorHint="#A1887F"
             android:textSize="24sp"
             tools:ignore="LabelFor" />
 
@@ -40,7 +41,7 @@
             android:drawableStart="@android:drawable/ic_lock_lock"
             android:ems="10"
             android:fontFamily="cursive"
-            android:hint="Password"
+            android:hint="@string/password"
             android:importantForAutofill="no"
             android:inputType="textPersonName|textPassword"
             android:textColor="#009688"
